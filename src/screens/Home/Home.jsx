@@ -8,6 +8,7 @@ import ArrowRight2 from '../../Lotties/arrow-right.json';
 import ArrowRight3 from '../../Lotties/arrow-right.json';
 import ArrowRight4 from '../../Lotties/arrow-right.json';
 import VidFile from '../../videos/Melvitto edit.mp4';
+import KiiraVid from '../../videos/Kiira edit.mp4';
 
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
@@ -316,10 +317,10 @@ const Home = () => {
   
     let result = Math.round((widthBar/widthProgress));
 
-    console.log(widthBar);
-    console.log(widthProgress);
+    //console.log(widthBar);
+    //console.log(widthProgress);
   
-    console.log(result);
+    //console.log(result);
   
     function moveLoad() {
       setInterval(addFrame, 50);
@@ -752,11 +753,20 @@ const Home = () => {
                     </div>
 
                     <p className='details-text-small-link'>
-                    <a className='link' href='https://melvitto.netlify.app' target="_blank">Kiira - A smart virtual clinic for women</a>
+                    <a className='link' href='https://www.kiira.io' target="_blank"
+                    onMouseEnter={() => {  
+                      setIsHovering(true);
+                    }}
+        
+                    onMouseLeave={() => {
+                      setIsHovering(false);
+                    }}
+                    >
+                      Kiira - A smart virtual clinic for women</a>
                     </p>
                     <div className='video-box'>
                         <video autoPlay loop muted width="100%">
-                        <source src={VidFile} type="video/mp4"
+                        <source src={KiiraVid} type="video/mp4"
                         />
                         </video>
                     </div>
